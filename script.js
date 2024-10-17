@@ -26,10 +26,8 @@ function increment() {
 }
 
 function decrement() {
-    if (currentNumber > 0) {
-        currentNumber--;
-        document.getElementById('numberDisplay').innerText = currentNumber;
-    }
+    currentNumber--;
+    document.getElementById('numberDisplay').innerText = currentNumber;
 }
 
 function saveNumber() {
@@ -40,7 +38,7 @@ function saveNumber() {
         color: currentColor
     };
 
-    savedNumbers.unshift(newNumber);
+    savedNumbers.unshift(newNumber); 
 
     localStorage.setItem('savedNumbers', JSON.stringify(savedNumbers));
 
